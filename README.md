@@ -1,7 +1,3 @@
-Tietosuojaselostesivu: https://janstech.github.io/kauppalista-privacy-policy/ 
-
-Privacy Policy page: https://janstech.github.io/kauppalista-privacy-policy/
-
 # Shopping List & Notes – Legal & Support Pages
 
 This repository hosts the GitHub Pages site for the Android app:
