@@ -4,71 +4,109 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Delete data – Shopping List & Notes</title>
+  <meta name="robots" content="index,follow" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <nav class="nav">
-    <a href="index.html">Privacy Policy</a>
-    <a href="support.html">Support</a>
-    <a href="terms.html">Terms</a>
-    <a href="delete-data.html" aria-current="page">Delete data</a>
-  </nav>
+  <div class="container">
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <h1>Shopping List &amp; Notes <span class="sub">Legal & Support Pages</span></h1>
+        </div>
+      </div>
 
-  <main class="container">
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html" data-i18n="nav_privacy">Privacy Policy</a>
+        <a href="support.html" data-i18n="nav_support">Support</a>
+        <a href="terms.html" data-i18n="nav_terms">Terms</a>
+        <a class="active" href="delete-data.html" data-i18n="nav_delete">Delete data</a>
+      </nav>
 
-    <!-- EN -->
-    <section class="language-section">
-      <h1>Delete your data</h1>
-      <p>
-        The app stores shopping lists and notes locally on your device.
-        To delete all app data:
-      </p>
+      <div class="lang">
+        <span class="hint" data-i18n="lang_label">Language</span>
+        <button id="btnEn" type="button">EN</button>
+        <button id="btnFi" type="button">FI</button>
+      </div>
+    </header>
 
-      <h2>Android (general steps)</h2>
-      <ol>
-        <li>Open <strong>Settings</strong></li>
-        <li>Go to <strong>Apps</strong> → <strong>Shopping List &amp; Notes</strong></li>
-        <li>Open <strong>Storage</strong></li>
-        <li>Tap <strong>Clear data</strong> (and optionally <strong>Clear cache</strong>)</li>
-        <li>Optionally uninstall the app to remove it completely</li>
-      </ol>
-
-      <p>
-        If you use export/import backups, deleting app data does not automatically delete files
-        you exported elsewhere. Delete those files manually from your storage if needed.
-      </p>
+    <section class="hero">
+      <span class="badge"><i></i> <span data-i18n="badge">Last updated</span>: <span>2026-01-21</span></span>
+      <h2 data-i18n="title">Delete your data</h2>
+      <p data-i18n="subtitle">How to remove app data from your device.</p>
     </section>
 
-    <hr />
-
-    <!-- FI -->
-    <section class="language-section">
-      <h1>Tietojen poistaminen</h1>
-      <p>
-        Sovellus tallentaa kauppalistat ja muistiinpanot paikallisesti laitteellesi.
-        Poistaaksesi kaikki sovelluksen tiedot:
+    <main class="card">
+      <p data-i18n="p1">
+        The app stores shopping lists and notes locally on your device. To delete all app data:
       </p>
 
-      <h2>Android (yleiset ohjeet)</h2>
+      <h3 data-i18n="h_android">Android (general steps)</h3>
       <ol>
-        <li>Avaa <strong>Asetukset</strong></li>
-        <li>Siirry kohtaan <strong>Sovellukset</strong> → <strong>Kauppalista &amp; Muistiinpanot</strong></li>
-        <li>Avaa <strong>Tallennustila</strong></li>
-        <li>Valitse <strong>Tyhjennä tiedot</strong> (halutessasi myös <strong>Tyhjennä välimuisti</strong>)</li>
-        <li>Halutessasi poista sovellus kokonaan laitteeltasi</li>
+        <li data-i18n="a1">Open <b>Settings</b></li>
+        <li data-i18n="a2">Go to <b>Apps</b> → <b>Shopping List &amp; Notes</b></li>
+        <li data-i18n="a3">Open <b>Storage</b></li>
+        <li data-i18n="a4">Tap <b>Clear data</b> (and optionally <b>Clear cache</b>)</li>
+        <li data-i18n="a5">Optionally uninstall the app to remove it completely</li>
       </ol>
 
-      <p>
-        Jos käytät vientiä/tuontia varmuuskopioihin, sovelluksen tietojen poistaminen ei automaattisesti
-        poista erikseen tallennettuja varmuuskopiotiedostoja. Poista ne tarvittaessa manuaalisesti
-        laitteesi tallennustilasta.
+      <p data-i18n="p2">
+        If you use export/import backups, deleting app data does not automatically delete files you exported elsewhere.
+        Delete those files manually from your storage if needed.
       </p>
-    </section>
 
-    <div class="footer">
-      <div>Last updated: 2026-01-21</div>
-    </div>
+      <p class="footer">© 2026 Janstech</p>
+    </main>
+  </div>
 
-  </main>
+  <script>
+    const dict = {
+      en: {
+        nav_privacy:"Privacy Policy", nav_support:"Support", nav_terms:"Terms", nav_delete:"Delete data",
+        lang_label:"Language", badge:"Last updated",
+        title:"Delete your data",
+        subtitle:"How to remove app data from your device.",
+        p1:"The app stores shopping lists and notes locally on your device. To delete all app data:",
+        h_android:"Android (general steps)",
+        a1:"Open <b>Settings</b>",
+        a2:"Go to <b>Apps</b> → <b>Shopping List &amp; Notes</b>",
+        a3:"Open <b>Storage</b>",
+        a4:"Tap <b>Clear data</b> (and optionally <b>Clear cache</b>)",
+        a5:"Optionally uninstall the app to remove it completely",
+        p2:"If you use export/import backups, deleting app data does not automatically delete files you exported elsewhere. Delete those files manually from your storage if needed."
+      },
+      fi: {
+        nav_privacy:"Tietosuoja", nav_support:"Tuki", nav_terms:"Käyttöehdot", nav_delete:"Poista tiedot",
+        lang_label:"Kieli", badge:"Päivitetty",
+        title:"Tietojen poistaminen",
+        subtitle:"Näin poistat sovelluksen tiedot laitteeltasi.",
+        p1:"Sovellus tallentaa kauppalistat ja muistiinpanot paikallisesti laitteellesi. Poistaaksesi kaikki sovelluksen tiedot:",
+        h_android:"Android (yleiset ohjeet)",
+        a1:"Avaa <b>Asetukset</b>",
+        a2:"Siirry kohtaan <b>Sovellukset</b> → <b>Kauppalista &amp; Muistiinpanot</b>",
+        a3:"Avaa <b>Tallennustila</b>",
+        a4:"Valitse <b>Tyhjennä tiedot</b> (halutessasi myös <b>Tyhjennä välimuisti</b>)",
+        a5:"Halutessasi poista sovellus kokonaan laitteeltasi",
+        p2:"Jos käytät vientiä/tuontia varmuuskopioihin, sovelluksen tietojen poistaminen ei automaattisesti poista erikseen tallennettuja varmuuskopiotiedostoja. Poista ne tarvittaessa manuaalisesti laitteesi tallennustilasta."
+      }
+    };
+
+    function setLang(lang){
+      localStorage.setItem("lang", lang);
+      document.documentElement.lang = (lang === "fi") ? "fi" : "en";
+      for (const el of document.querySelectorAll("[data-i18n]")){
+        const key = el.getAttribute("data-i18n");
+        if (dict[lang] && dict[lang][key] != null) el.innerHTML = dict[lang][key];
+      }
+      document.getElementById("btnFi").classList.toggle("active", lang === "fi");
+      document.getElementById("btnEn").classList.toggle("active", lang === "en");
+    }
+
+    const saved = localStorage.getItem("lang") || "en";
+    document.getElementById("btnFi").addEventListener("click", ()=>setLang("fi"));
+    document.getElementById("btnEn").addEventListener("click", ()=>setLang("en"));
+    setLang(saved);
+  </script>
 </body>
 </html>
