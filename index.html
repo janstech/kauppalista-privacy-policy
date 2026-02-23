@@ -1,252 +1,327 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Privacy Policy – Shopping List & Notes</title>
-
-  <!-- Optional but useful for sharing / search snippets -->
   <meta name="description" content="Privacy Policy for Shopping List & Notes (Kauppalista & Muistiinpanot). Offline-first app. AI features are optional and require internet only when used." />
-
-  <!-- Primary stylesheet (recommended) -->
+  <meta name="robots" content="index,follow" />
   <link rel="stylesheet" href="style.css" />
-
-  <!-- Fallback styles if style.css is missing -->
-  <style>
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6;margin:0;color:#111}
-    .nav{display:flex;flex-wrap:wrap;gap:12px;padding:14px 16px;border-bottom:1px solid #e6e6e6;background:#fafafa}
-    .nav a{text-decoration:none;color:#111;padding:6px 10px;border:1px solid #e6e6e6;border-radius:10px;background:#fff}
-    .nav a:hover{background:#f2f2f2}
-    .container{max-width:920px;margin:0 auto;padding:24px 16px 48px}
-    h1{border-bottom:2px solid #eee;padding-bottom:10px;margin:18px 0 10px}
-    h2{margin-top:30px}
-    .language-section{margin-bottom:50px}
-    hr{border:0;border-top:1px solid #eee;margin:40px 0}
-    .muted{color:#666;font-size:.95em}
-    .footer{margin-top:36px;padding-top:16px;border-top:1px solid #e6e6e6;font-size:.95rem;color:#444}
-  </style>
 </head>
-
 <body>
-  <nav class="nav">
-    <a href="index.html" aria-current="page">Privacy Policy</a>
-    <a href="support.html">Support</a>
-    <a href="terms.html">Terms</a>
-    <a href="delete-data.html">Delete data</a>
-  </nav>
+  <div class="container">
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <h1>Shopping List &amp; Notes <span class="sub">Legal & Support Pages</span></h1>
+        </div>
+      </div>
 
-  <main class="container">
+      <nav class="nav" aria-label="Primary">
+        <a class="active" href="index.html" data-i18n="nav_privacy">Privacy Policy</a>
+        <a href="support.html" data-i18n="nav_support">Support</a>
+        <a href="terms.html" data-i18n="nav_terms">Terms</a>
+        <a href="delete-data.html" data-i18n="nav_delete">Delete data</a>
+      </nav>
 
-    <!-- EN -->
-    <div class="language-section" id="privacy-en">
-      <h1>Privacy Policy</h1>
-      <p class="muted"><strong>Last updated:</strong> 2026-01-21</p>
+      <div class="lang">
+        <span class="hint" data-i18n="lang_label">Language</span>
+        <button id="btnEn" type="button">EN</button>
+        <button id="btnFi" type="button">FI</button>
+      </div>
+    </header>
 
-      <p>
-        This privacy policy governs your use of the mobile application
-        <strong>Shopping List &amp; Notes</strong> (also known as <strong>Kauppalista &amp; Muistiinpanot</strong>).
+    <section class="hero">
+      <span class="badge"><i></i> <span data-i18n="badge">Last updated</span>: <span>2026-01-21</span></span>
+      <h2 data-i18n="title">Privacy Policy</h2>
+      <p data-i18n="subtitle">
+        This page explains what data the app processes, why it’s processed, and how to contact support.
       </p>
+    </section>
 
-      <h2>Summary</h2>
-      <ul>
-        <li>No user accounts required.</li>
-        <li>Your shopping lists and notes are stored locally on your device.</li>
-        <li>AI features are optional and require an internet connection only when used.</li>
-        <li>To protect the AI service from abuse, limited technical data is processed (see below).</li>
-      </ul>
+    <div class="grid">
+      <main class="card">
+        <h3 data-i18n="h_intro">Introduction</h3>
+        <p data-i18n="p_intro">
+          This privacy policy governs your use of the mobile application <b>Shopping List &amp; Notes</b>
+          (also known as <b>Kauppalista &amp; Muistiinpanot</b>).
+        </p>
 
-      <h2>Data Collection and Usage</h2>
-      <p>
-        The application does not require user accounts and is designed to work without collecting
-        personally identifiable information such as your name, address, or contact details.
-      </p>
-      <p>
-        All shopping lists, notes, favorites, and other everyday content you create are stored locally on your device.
-        The developer does not receive or host your lists/notes.
-      </p>
+        <hr class="sep"/>
 
-      <h2>AI Features (Meal Suggestions &amp; Weekly Meal Plans)</h2>
-      <p>
-        The application includes optional AI-powered features, such as meal/recipe suggestions and weekly meal plans.
-        When you use these features, the text you provide (for example, preferences, wishes, allergies/restrictions,
-        number of days, servings) is sent to a secure backend service solely to generate the requested AI result.
-      </p>
-      <p>
-        The AI request text is processed transiently for generating a response. It is not used to create a personal profile
-        in the application and is not associated with a user account.
-      </p>
+        <h3 data-i18n="h_summary">Summary</h3>
+        <ul>
+          <li data-i18n="s1">No user accounts required.</li>
+          <li data-i18n="s2">Your shopping lists and notes are stored locally on your device.</li>
+          <li data-i18n="s3">AI features are optional and require an internet connection only when used.</li>
+          <li data-i18n="s4">To protect the AI service from abuse, limited technical data is processed (see below).</li>
+        </ul>
 
-      <h2>Security &amp; Anti-Abuse (App Check, Play Integrity, Rate Limiting)</h2>
-      <p>
-        To prevent abuse and protect availability, the backend may verify technical tokens and perform rate limiting.
-        This can include:
-      </p>
-      <ul>
-        <li><strong>Firebase App Check token</strong> (to verify requests originate from a legitimate app instance).</li>
-        <li><strong>Google Play Integrity token + nonce</strong> (to help detect tampered or untrusted environments).</li>
-        <li><strong>Client identifier</strong> (an app-generated technical identifier used to apply usage limits).</li>
-        <li><strong>Request counters and timestamps</strong> (to enforce daily and short-term rate limits).</li>
-      </ul>
-      <p>
-        These checks are used for security and service protection purposes only. They are not used for advertising,
-        cross-app tracking, or building personal user histories.
-      </p>
+        <hr class="sep"/>
 
-      <h2>Voice Input (Speech-to-Text)</h2>
-      <p>
-        The app may offer voice input for adding items. Voice recognition is provided by your device’s speech recognition
-        service (for example, Google Speech-to-Text on Android). Depending on device settings and language packs,
-        speech recognition may require an internet connection and may be processed by the provider of the speech service.
-      </p>
+        <h3 data-i18n="h_collect">Data Collection and Usage</h3>
+        <p data-i18n="p_collect_1">
+          The application does not require user accounts and is designed to work without collecting personally identifiable
+          information such as your name, address, or contact details.
+        </p>
+        <p data-i18n="p_collect_2">
+          All shopping lists, notes, favorites, and other everyday content you create are stored locally on your device.
+          The developer does not receive or host your lists/notes.
+        </p>
 
-      <h2>Third-Party Services</h2>
-      <p>
-        The AI functionality relies on third-party AI services to generate responses. Only the text required to generate the
-        requested suggestion is transmitted. In addition, the app may use security verification services such as
-        Firebase App Check and Google Play Integrity for abuse prevention.
-      </p>
+        <hr class="sep"/>
 
-      <h2>Data Retention</h2>
-      <p>
-        The application does not build personal user histories. AI request text is not stored for profiling or tracking.
-      </p>
-      <p>
-        Limited technical/anti-abuse records (such as rate-limit counters and last-seen timestamps tied to technical identifiers)
-        may be stored to enforce usage limits and protect the service. These records are not used to identify you as a person.
-      </p>
+        <h3 data-i18n="h_ai">AI Features (Meal Suggestions &amp; Weekly Meal Plans)</h3>
+        <p data-i18n="p_ai_1">
+          The application includes optional AI-powered features, such as meal/recipe suggestions and weekly meal plans.
+          When you use these features, the text you provide (for example, preferences, wishes, allergies/restrictions,
+          number of days, servings) is sent to a secure backend service solely to generate the requested AI result.
+        </p>
+        <p data-i18n="p_ai_2">
+          The AI request text is processed transiently for generating a response. It is not used to create a personal profile
+          in the application and is not associated with a user account.
+        </p>
 
-      <h2>AI Content Disclaimer</h2>
-      <p>
-        The AI-generated suggestions provided by the application are intended for general informational and inspirational purposes only.
-      </p>
-      <p>
-        AI-generated content may be incomplete, inaccurate, or contain errors. The application does not guarantee the correctness,
-        completeness, or suitability of AI-generated information. Users should apply their own judgment and verify information when necessary.
-      </p>
-      <p>
-        AI-generated content does not constitute professional, medical, nutritional, or legal advice.
-      </p>
+        <hr class="sep"/>
 
-      <h2>Changes</h2>
-      <p>
-        This Privacy Policy may be updated from time to time. Any changes will be published on this page.
-      </p>
+        <h3 data-i18n="h_sec">Security &amp; Anti-Abuse (App Check, Play Integrity, Rate Limiting)</h3>
+        <p data-i18n="p_sec_1">
+          To prevent abuse and protect availability, the backend may verify technical tokens and perform rate limiting. This can include:
+        </p>
+        <ul>
+          <li data-i18n="sec_1"><b>Firebase App Check token</b> (to verify requests originate from a legitimate app instance).</li>
+          <li data-i18n="sec_2"><b>Google Play Integrity token + nonce</b> (to help detect tampered or untrusted environments).</li>
+          <li data-i18n="sec_3"><b>Client identifier</b> (an app-generated technical identifier used to apply usage limits).</li>
+          <li data-i18n="sec_4"><b>Request counters and timestamps</b> (to enforce daily and short-term rate limits).</li>
+        </ul>
+        <p data-i18n="p_sec_2">
+          These checks are used for security and service protection purposes only. They are not used for advertising, cross-app tracking, or building personal user histories.
+        </p>
 
-      <h2>Contact</h2>
-      <p>
-        If you have any questions regarding privacy, please contact:
-        <strong><a href="mailto:janstech.apps@gmail.com">janstech.apps@gmail.com</a></strong>
-      </p>
+        <hr class="sep"/>
+
+        <h3 data-i18n="h_voice">Voice Input (Speech-to-Text)</h3>
+        <p data-i18n="p_voice">
+          The app may offer voice input for adding items. Voice recognition is provided by your device’s speech recognition
+          service (for example, Google Speech-to-Text on Android). Depending on device settings and language packs,
+          speech recognition may require an internet connection and may be processed by the provider of the speech service.
+        </p>
+
+        <hr class="sep"/>
+
+        <h3 data-i18n="h_3p">Third-Party Services</h3>
+        <p data-i18n="p_3p">
+          The AI functionality relies on third-party AI services to generate responses. Only the text required to generate the requested suggestion is transmitted.
+          In addition, the app may use security verification services such as Firebase App Check and Google Play Integrity for abuse prevention.
+        </p>
+
+        <hr class="sep"/>
+
+        <h3 data-i18n="h_ret">Data Retention</h3>
+        <p data-i18n="p_ret_1">The application does not build personal user histories. AI request text is not stored for profiling or tracking.</p>
+        <p data-i18n="p_ret_2">
+          Limited technical/anti-abuse records (such as rate-limit counters and last-seen timestamps tied to technical identifiers) may be stored to enforce usage limits and protect the service.
+          These records are not used to identify you as a person.
+        </p>
+
+        <hr class="sep"/>
+
+        <h3 data-i18n="h_disc">AI Content Disclaimer</h3>
+        <p data-i18n="p_disc_1">The AI-generated suggestions provided by the application are intended for general informational and inspirational purposes only.</p>
+        <p data-i18n="p_disc_2">
+          AI-generated content may be incomplete, inaccurate, or contain errors. The application does not guarantee the correctness, completeness, or suitability of AI-generated information.
+          Users should apply their own judgment and verify information when necessary.
+        </p>
+        <p data-i18n="p_disc_3">AI-generated content does not constitute professional, medical, nutritional, or legal advice.</p>
+
+        <hr class="sep"/>
+
+        <h3 data-i18n="h_changes">Changes</h3>
+        <p data-i18n="p_changes">This Privacy Policy may be updated from time to time. Any changes will be published on this page.</p>
+
+        <hr class="sep"/>
+
+        <h3 data-i18n="h_contact">Contact</h3>
+        <p data-i18n="p_contact">
+          If you have any questions regarding privacy, please contact:
+          <b><a href="mailto:janstech.apps@gmail.com">janstech.apps@gmail.com</a></b>
+        </p>
+
+        <p class="footer">© 2026 Janstech</p>
+      </main>
+
+      <aside class="card">
+        <h3 data-i18n="quick_h">Quick links</h3>
+        <ul>
+          <li><a href="support.html" data-i18n="quick_support">Support</a></li>
+          <li><a href="terms.html" data-i18n="quick_terms">Terms</a></li>
+          <li><a href="delete-data.html" data-i18n="quick_delete">Delete data</a></li>
+        </ul>
+
+        <hr class="sep"/>
+
+        <h3 data-i18n="facts_h">What is stored locally</h3>
+        <ul>
+          <li data-i18n="facts_1">Shopping lists & notes</li>
+          <li data-i18n="facts_2">Favorites and other app preferences</li>
+          <li data-i18n="facts_3">Optional exports/backups you create</li>
+        </ul>
+
+        <p class="footer" data-i18n="footer_note">
+          Offline-first: most data stays on your device unless you use optional AI features.
+        </p>
+      </aside>
     </div>
+  </div>
 
-    <hr />
+  <script>
+    const dict = {
+      en: {
+        nav_privacy:"Privacy Policy", nav_support:"Support", nav_terms:"Terms", nav_delete:"Delete data",
+        lang_label:"Language", badge:"Last updated",
+        title:"Privacy Policy",
+        subtitle:"This page explains what data the app processes, why it’s processed, and how to contact support.",
 
-    <!-- FI -->
-    <div class="language-section" id="privacy-fi">
-      <h1>Tietosuojakäytäntö</h1>
-      <p class="muted"><strong>Päivitetty:</strong> 21.1.2026</p>
+        h_intro:"Introduction",
+        p_intro:"This privacy policy governs your use of the mobile application <b>Shopping List &amp; Notes</b> (also known as <b>Kauppalista &amp; Muistiinpanot</b>).",
 
-      <p>
-        Tämä tietosuojakäytäntö koskee <strong>Kauppalista &amp; Muistiinpanot</strong>-mobiilisovellusta
-        (englanniksi <strong>Shopping List &amp; Notes</strong>).
-      </p>
+        h_summary:"Summary",
+        s1:"No user accounts required.",
+        s2:"Your shopping lists and notes are stored locally on your device.",
+        s3:"AI features are optional and require an internet connection only when used.",
+        s4:"To protect the AI service from abuse, limited technical data is processed (see below).",
 
-      <h2>Yhteenveto</h2>
-      <ul>
-        <li>Ei käyttäjätiliä.</li>
-        <li>Kauppalistat ja muistiinpanot tallentuvat omalle laitteellesi.</li>
-        <li>AI-toiminnot ovat vapaaehtoisia ja vaativat internetin vain käytön aikana.</li>
-        <li>AI-palvelun suojaamiseksi käsitellään rajattua teknistä turvadataa (alla).</li>
-      </ul>
+        h_collect:"Data Collection and Usage",
+        p_collect_1:"The application does not require user accounts and is designed to work without collecting personally identifiable information such as your name, address, or contact details.",
+        p_collect_2:"All shopping lists, notes, favorites, and other everyday content you create are stored locally on your device. The developer does not receive or host your lists/notes.",
 
-      <h2>Tietojen kerääminen ja käyttö</h2>
-      <p>
-        Sovellus ei vaadi käyttäjätiliä ja se on suunniteltu toimimaan ilman henkilötietojen keräämistä
-        (kuten nimi, osoite tai yhteystiedot).
-      </p>
-      <p>
-        Kaikki kauppalistat, muistiinpanot, suosikit ja muu sisältö tallennetaan paikallisesti käyttäjän omalle laitteelle.
-        Kehittäjä ei vastaanota tai isännöi käyttäjän listoja/muistiinpanoja.
-      </p>
+        h_ai:"AI Features (Meal Suggestions &amp; Weekly Meal Plans)",
+        p_ai_1:"The application includes optional AI-powered features, such as meal/recipe suggestions and weekly meal plans. When you use these features, the text you provide (for example, preferences, wishes, allergies/restrictions, number of days, servings) is sent to a secure backend service solely to generate the requested AI result.",
+        p_ai_2:"The AI request text is processed transiently for generating a response. It is not used to create a personal profile in the application and is not associated with a user account.",
 
-      <h2>AI-toiminnot (Ateria-/reseptiehdotukset ja viikkoruokalista)</h2>
-      <p>
-        Sovellus sisältää vapaaehtoisia tekoälypohjaisia toimintoja, kuten ateriavinkkejä ja viikkoruokalistan.
-        Kun käytät näitä toimintoja, antamasi teksti (esim. toiveet, allergiat/rajoitteet, päivien määrä ja annokset)
-        lähetetään suojattuun taustapalveluun ainoastaan pyydetyn AI-vastauksen muodostamista varten.
-      </p>
-      <p>
-        AI-pyyntöjen tekstiä käsitellään hetkellisesti vastauksen tuottamiseksi. Sitä ei käytetä sovelluksessa henkilöprofiilien luomiseen,
-        eikä sitä liitetä käyttäjätiliin (koska käyttäjätiliä ei ole).
-      </p>
+        h_sec:"Security &amp; Anti-Abuse (App Check, Play Integrity, Rate Limiting)",
+        p_sec_1:"To prevent abuse and protect availability, the backend may verify technical tokens and perform rate limiting. This can include:",
+        sec_1:"<b>Firebase App Check token</b> (to verify requests originate from a legitimate app instance).",
+        sec_2:"<b>Google Play Integrity token + nonce</b> (to help detect tampered or untrusted environments).",
+        sec_3:"<b>Client identifier</b> (an app-generated technical identifier used to apply usage limits).",
+        sec_4:"<b>Request counters and timestamps</b> (to enforce daily and short-term rate limits).",
+        p_sec_2:"These checks are used for security and service protection purposes only. They are not used for advertising, cross-app tracking, or building personal user histories.",
 
-      <h2>Turva ja väärinkäytösten esto (App Check, Play Integrity, rajoitukset)</h2>
-      <p>
-        Palvelun suojaamiseksi taustapalvelu voi tarkistaa teknisiä turvatietoja ja rajoittaa pyyntöjen määrää.
-        Tämä voi sisältää:
-      </p>
-      <ul>
-        <li><strong>Firebase App Check -tokenin</strong> (varmistaa, että pyyntö tulee aidosta sovelluksesta).</li>
-        <li><strong>Google Play Integrity -tokenin + noncen</strong> (auttaa tunnistamaan muokatut/epäluotettavat ympäristöt).</li>
-        <li><strong>Client-ID:n</strong> (sovelluksen luoma tekninen tunniste käyttörajoituksia varten).</li>
-        <li><strong>Pyyntölaskurit ja aikaleimat</strong> (päivä- ja lyhytaikaisten rajoitusten toteutus).</li>
-      </ul>
-      <p>
-        Näitä käytetään ainoastaan tietoturvaan ja palvelun suojaamiseen. Niitä ei käytetä mainontaan,
-        käyttäjän seurantaan sovellusten välillä tai henkilökohtaisen käyttöhistorian rakentamiseen.
-      </p>
+        h_voice:"Voice Input (Speech-to-Text)",
+        p_voice:"The app may offer voice input for adding items. Voice recognition is provided by your device’s speech recognition service (for example, Google Speech-to-Text on Android). Depending on device settings and language packs, speech recognition may require an internet connection and may be processed by the provider of the speech service.",
 
-      <h2>Puheella lisääminen (puhe tekstiksi)</h2>
-      <p>
-        Sovellus voi tarjota puheella lisäämisen. Puheentunnistus toteutetaan laitteen puheentunnistuspalvelulla
-        (esimerkiksi Googlen puheentunnistus Androidissa). Laitteen asetuksista ja kielipaketeista riippuen
-        puheentunnistus voi vaatia internet-yhteyden ja käsittelyä palveluntarjoajan järjestelmissä.
-      </p>
+        h_3p:"Third-Party Services",
+        p_3p:"The AI functionality relies on third-party AI services to generate responses. Only the text required to generate the requested suggestion is transmitted. In addition, the app may use security verification services such as Firebase App Check and Google Play Integrity for abuse prevention.",
 
-      <h2>Kolmannen osapuolen palvelut</h2>
-      <p>
-        AI-toiminnallisuus hyödyntää kolmannen osapuolen tekoälypalveluita vastausten tuottamiseen.
-        Vain tehtävän suorittamiseen tarvittava teksti välitetään. Lisäksi sovellus voi käyttää turvatarkistuspalveluita
-        (Firebase App Check, Google Play Integrity) väärinkäytösten estämiseksi.
-      </p>
+        h_ret:"Data Retention",
+        p_ret_1:"The application does not build personal user histories. AI request text is not stored for profiling or tracking.",
+        p_ret_2:"Limited technical/anti-abuse records (such as rate-limit counters and last-seen timestamps tied to technical identifiers) may be stored to enforce usage limits and protect the service. These records are not used to identify you as a person.",
 
-      <h2>Tietojen säilytys</h2>
-      <p>
-        Sovellus ei rakenna henkilökohtaisia käyttöhistorioita. AI-pyyntöjen tekstiä ei tallenneta profilointiin tai seurantaan.
-      </p>
-      <p>
-        Rajattuja teknisiä väärinkäytösten estoon liittyviä tietoja (esim. käyttörajoitusten laskurit ja “last seen” -aikaleimat
-        teknisiin tunnisteisiin sidottuna) voidaan säilyttää palvelun suojaamiseksi. Näitä tietoja ei käytetä käyttäjän tunnistamiseen henkilönä.
-      </p>
+        h_disc:"AI Content Disclaimer",
+        p_disc_1:"The AI-generated suggestions provided by the application are intended for general informational and inspirational purposes only.",
+        p_disc_2:"AI-generated content may be incomplete, inaccurate, or contain errors. The application does not guarantee the correctness, completeness, or suitability of AI-generated information. Users should apply their own judgment and verify information when necessary.",
+        p_disc_3:"AI-generated content does not constitute professional, medical, nutritional, or legal advice.",
 
-      <h2>Tekoälysisällön vastuuvapaus</h2>
-      <p>
-        Sovelluksen tuottamat tekoälypohjaiset ehdotukset on tarkoitettu yleiseen tiedonhakuun ja inspiraatioksi.
-      </p>
-      <p>
-        Tekoälyn tuottama sisältö voi olla puutteellista, virheellistä tai sisältää epätarkkuuksia. Sovellus ei takaa sisällön
-        oikeellisuutta, kattavuutta tai soveltuvuutta. Käyttäjää kehotetaan käyttämään omaa harkintaansa ja varmistamaan tiedot tarvittaessa.
-      </p>
-      <p>
-        Tekoälyn tuottama sisältö ei ole ammatillista, lääketieteellistä, ravitsemuksellista tai juridista neuvontaa.
-      </p>
+        h_changes:"Changes",
+        p_changes:"This Privacy Policy may be updated from time to time. Any changes will be published on this page.",
 
-      <h2>Muutokset</h2>
-      <p>
-        Tätä tietosuojakäytäntöä voidaan päivittää tarvittaessa. Muutokset astuvat voimaan, kun ne julkaistaan tällä sivulla.
-      </p>
+        h_contact:"Contact",
+        p_contact:"If you have any questions regarding privacy, please contact: <b><a href=\"mailto:janstech.apps@gmail.com\">janstech.apps@gmail.com</a></b>",
 
-      <h2>Yhteystiedot</h2>
-      <p>
-        Jos sinulla on kysyttävää tietosuojaan liittyen, ota yhteyttä:
-        <strong><a href="mailto:janstech.apps@gmail.com">janstech.apps@gmail.com</a></strong>
-      </p>
-    </div>
+        quick_h:"Quick links",
+        quick_support:"Support",
+        quick_terms:"Terms",
+        quick_delete:"Delete data",
 
-    <div class="footer">
-      <div>© 2026 Janstech</div>
-    </div>
+        facts_h:"What is stored locally",
+        facts_1:"Shopping lists & notes",
+        facts_2:"Favorites and other app preferences",
+        facts_3:"Optional exports/backups you create",
 
-  </main>
+        footer_note:"Offline-first: most data stays on your device unless you use optional AI features."
+      },
+      fi: {
+        nav_privacy:"Tietosuoja", nav_support:"Tuki", nav_terms:"Käyttöehdot", nav_delete:"Poista tiedot",
+        lang_label:"Kieli", badge:"Päivitetty",
+        title:"Tietosuojakäytäntö",
+        subtitle:"Tällä sivulla kerrotaan, mitä tietoja sovellus käsittelee, miksi, ja miten saat yhteyden tukeen.",
+
+        h_intro:"Johdanto",
+        p_intro:"Tämä tietosuojakäytäntö koskee <b>Kauppalista &amp; Muistiinpanot</b> -mobiilisovellusta (englanniksi <b>Shopping List &amp; Notes</b>).",
+
+        h_summary:"Yhteenveto",
+        s1:"Ei käyttäjätiliä.",
+        s2:"Kauppalistat ja muistiinpanot tallentuvat laitteellesi.",
+        s3:"AI-toiminnot ovat vapaaehtoisia ja vaativat internetin vain käytön aikana.",
+        s4:"AI-palvelun suojaamiseksi käsitellään rajattua teknistä turvadataa (alla).",
+
+        h_collect:"Tietojen kerääminen ja käyttö",
+        p_collect_1:"Sovellus ei vaadi käyttäjätiliä ja on suunniteltu toimimaan ilman henkilötietojen keräämistä (kuten nimi, osoite tai yhteystiedot).",
+        p_collect_2:"Kaikki kauppalistat, muistiinpanot, suosikit ja muu sisältö tallennetaan paikallisesti omalle laitteellesi. Kehittäjä ei vastaanota tai isännöi listoja/muistiinpanoja.",
+
+        h_ai:"AI-toiminnot (Ateria-/reseptiehdotukset ja viikkoruokalista)",
+        p_ai_1:"Sovellus sisältää vapaaehtoisia tekoälypohjaisia toimintoja, kuten ateriavinkkejä ja viikkoruokalistan. Kun käytät näitä toimintoja, antamasi teksti (esim. toiveet, allergiat/rajoitteet, päivien määrä ja annokset) lähetetään suojattuun taustapalveluun ainoastaan pyydetyn AI-vastauksen muodostamista varten.",
+        p_ai_2:"AI-pyyntöjen tekstiä käsitellään hetkellisesti vastauksen tuottamiseksi. Sitä ei käytetä henkilöprofiilien luomiseen eikä sitä liitetä käyttäjätiliin (koska käyttäjätiliä ei ole).",
+
+        h_sec:"Turva ja väärinkäytösten esto (App Check, Play Integrity, rajoitukset)",
+        p_sec_1:"Palvelun suojaamiseksi taustapalvelu voi tarkistaa teknisiä turvatietoja ja rajoittaa pyyntöjen määrää. Tämä voi sisältää:",
+        sec_1:"<b>Firebase App Check -tokenin</b> (varmistaa, että pyyntö tulee aidosta sovelluksesta).",
+        sec_2:"<b>Google Play Integrity -tokenin + noncen</b> (auttaa tunnistamaan muokatut/epäluotettavat ympäristöt).",
+        sec_3:"<b>Client-ID:n</b> (sovelluksen luoma tekninen tunniste käyttörajoituksia varten).",
+        sec_4:"<b>Pyyntölaskurit ja aikaleimat</b> (päivä- ja lyhytaikaisten rajoitusten toteutus).",
+        p_sec_2:"Näitä käytetään ainoastaan tietoturvaan ja palvelun suojaamiseen. Niitä ei käytetä mainontaan, seurantaan sovellusten välillä tai henkilökohtaisen käyttöhistorian rakentamiseen.",
+
+        h_voice:"Puheella lisääminen (puhe tekstiksi)",
+        p_voice:"Sovellus voi tarjota puheella lisäämisen. Puheentunnistus toteutetaan laitteen puheentunnistuspalvelulla (esimerkiksi Googlen puheentunnistus Androidissa). Laitteen asetuksista ja kielipaketeista riippuen puheentunnistus voi vaatia internet-yhteyden ja käsittelyä palveluntarjoajan järjestelmissä.",
+
+        h_3p:"Kolmannen osapuolen palvelut",
+        p_3p:"AI-toiminnallisuus hyödyntää kolmannen osapuolen tekoälypalveluita vastausten tuottamiseen. Vain tehtävän suorittamiseen tarvittava teksti välitetään. Lisäksi sovellus voi käyttää turvatarkistuspalveluita (Firebase App Check, Google Play Integrity) väärinkäytösten estämiseksi.",
+
+        h_ret:"Tietojen säilytys",
+        p_ret_1:"Sovellus ei rakenna henkilökohtaisia käyttöhistorioita. AI-pyyntöjen tekstiä ei tallenneta profilointiin tai seurantaan.",
+        p_ret_2:"Rajattuja teknisiä väärinkäytösten estoon liittyviä tietoja (esim. käyttörajoitusten laskurit ja “last seen” -aikaleimat teknisiin tunnisteisiin sidottuna) voidaan säilyttää palvelun suojaamiseksi. Näitä tietoja ei käytetä käyttäjän tunnistamiseen henkilönä.",
+
+        h_disc:"Tekoälysisällön vastuuvapaus",
+        p_disc_1:"Sovelluksen tuottamat tekoälypohjaiset ehdotukset on tarkoitettu yleiseen tiedonhakuun ja inspiraatioksi.",
+        p_disc_2:"Tekoälyn tuottama sisältö voi olla puutteellista, virheellistä tai sisältää epätarkkuuksia. Sovellus ei takaa sisällön oikeellisuutta, kattavuutta tai soveltuvuutta. Käyttäjää kehotetaan käyttämään omaa harkintaansa ja varmistamaan tiedot tarvittaessa.",
+        p_disc_3:"Tekoälyn tuottama sisältö ei ole ammatillista, lääketieteellistä, ravitsemuksellista tai juridista neuvontaa.",
+
+        h_changes:"Muutokset",
+        p_changes:"Tätä tietosuojakäytäntöä voidaan päivittää tarvittaessa. Muutokset astuvat voimaan, kun ne julkaistaan tällä sivulla.",
+
+        h_contact:"Yhteystiedot",
+        p_contact:"Jos sinulla on kysyttävää tietosuojaan liittyen, ota yhteyttä: <b><a href=\"mailto:janstech.apps@gmail.com\">janstech.apps@gmail.com</a></b>",
+
+        quick_h:"Pikalinkit",
+        quick_support:"Tuki",
+        quick_terms:"Käyttöehdot",
+        quick_delete:"Poista tiedot",
+
+        facts_h:"Mitä tallennetaan laitteelle",
+        facts_1:"Kauppalistat ja muistiinpanot",
+        facts_2:"Suosikit ja muut asetukset",
+        facts_3:"Mahdolliset vienti-/varmuuskopiotiedostot",
+
+        footer_note:"Offline-first: suurin osa tiedosta pysyy laitteella, ellei käytä vapaaehtoisia AI-toimintoja."
+      }
+    };
+
+    function setLang(lang){
+      localStorage.setItem("lang", lang);
+      document.documentElement.lang = (lang === "fi") ? "fi" : "en";
+      for (const el of document.querySelectorAll("[data-i18n]")){
+        const key = el.getAttribute("data-i18n");
+        if (dict[lang] && dict[lang][key] != null) el.innerHTML = dict[lang][key];
+      }
+      document.getElementById("btnFi").classList.toggle("active", lang === "fi");
+      document.getElementById("btnEn").classList.toggle("active", lang === "en");
+    }
+
+    const saved = localStorage.getItem("lang") || "en";
+    document.getElementById("btnFi").addEventListener("click", ()=>setLang("fi"));
+    document.getElementById("btnEn").addEventListener("click", ()=>setLang("en"));
+    setLang(saved);
+  </script>
 </body>
 </html>
