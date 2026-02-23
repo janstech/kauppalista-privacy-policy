@@ -4,92 +4,122 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Terms of Use – Shopping List & Notes</title>
+  <meta name="robots" content="index,follow" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <nav class="nav">
-    <a href="index.html">Privacy Policy</a>
-    <a href="support.html">Support</a>
-    <a href="terms.html" aria-current="page">Terms</a>
-    <a href="delete-data.html">Delete data</a>
-  </nav>
+  <div class="container">
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <h1>Shopping List &amp; Notes <span class="sub">Legal & Support Pages</span></h1>
+        </div>
+      </div>
 
-  <main class="container">
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html" data-i18n="nav_privacy">Privacy Policy</a>
+        <a href="support.html" data-i18n="nav_support">Support</a>
+        <a class="active" href="terms.html" data-i18n="nav_terms">Terms</a>
+        <a href="delete-data.html" data-i18n="nav_delete">Delete data</a>
+      </nav>
 
-    <!-- EN -->
-    <section class="language-section">
-      <h1>Terms of Use</h1>
-      <p><strong>Last updated:</strong> 2026-01-21</p>
+      <div class="lang">
+        <span class="hint" data-i18n="lang_label">Language</span>
+        <button id="btnEn" type="button">EN</button>
+        <button id="btnFi" type="button">FI</button>
+      </div>
+    </header>
 
-      <h2>1. General</h2>
-      <p>
+    <section class="hero">
+      <span class="badge"><i></i> <span data-i18n="badge">Last updated</span>: <span>2026-01-21</span></span>
+      <h2 data-i18n="title">Terms of Use</h2>
+      <p data-i18n="subtitle">Basic terms for using the app.</p>
+    </section>
+
+    <main class="card">
+      <h3 data-i18n="t1_h">1. General</h3>
+      <p data-i18n="t1_p">
         Shopping List &amp; Notes (Kauppalista &amp; Muistiinpanot) is provided “as is”.
         You are responsible for how you use the app and its outputs.
       </p>
 
-      <h2>2. Offline data</h2>
-      <p>
+      <h3 data-i18n="t2_h">2. Offline data</h3>
+      <p data-i18n="t2_p">
         Your lists and notes are stored locally on your device. You are responsible for device security and backups.
       </p>
 
-      <h2>3. AI features disclaimer</h2>
-      <p>
+      <h3 data-i18n="t3_h">3. AI features disclaimer</h3>
+      <p data-i18n="t3_p">
         AI-powered suggestions are provided for informational and inspirational purposes only.
         AI-generated content may be inaccurate or incomplete and does not constitute professional, medical,
         nutritional, or legal advice.
       </p>
 
-      <h2>4. Availability and changes</h2>
-      <p>
+      <h3 data-i18n="t4_h">4. Availability and changes</h3>
+      <p data-i18n="t4_p">
         Features (including AI) may change, be limited, or be discontinued at any time
         to protect service availability and prevent abuse.
       </p>
 
-      <h2>5. Contact</h2>
-      <p>janstech.apps@gmail.com</p>
-    </section>
+      <h3 data-i18n="t5_h">5. Contact</h3>
+      <p data-i18n="t5_p"><b><a href="mailto:janstech.apps@gmail.com">janstech.apps@gmail.com</a></b></p>
 
-    <hr />
+      <p class="footer">© 2026 Janstech</p>
+    </main>
+  </div>
 
-    <!-- FI -->
-    <section class="language-section">
-      <h1>Käyttöehdot</h1>
-      <p><strong>Päivitetty:</strong> 21.1.2026</p>
+  <script>
+    const dict = {
+      en: {
+        nav_privacy:"Privacy Policy", nav_support:"Support", nav_terms:"Terms", nav_delete:"Delete data",
+        lang_label:"Language", badge:"Last updated",
+        title:"Terms of Use",
+        subtitle:"Basic terms for using the app.",
+        t1_h:"1. General",
+        t1_p:"Shopping List &amp; Notes (Kauppalista &amp; Muistiinpanot) is provided “as is”. You are responsible for how you use the app and its outputs.",
+        t2_h:"2. Offline data",
+        t2_p:"Your lists and notes are stored locally on your device. You are responsible for device security and backups.",
+        t3_h:"3. AI features disclaimer",
+        t3_p:"AI-powered suggestions are provided for informational and inspirational purposes only. AI-generated content may be inaccurate or incomplete and does not constitute professional, medical, nutritional, or legal advice.",
+        t4_h:"4. Availability and changes",
+        t4_p:"Features (including AI) may change, be limited, or be discontinued at any time to protect service availability and prevent abuse.",
+        t5_h:"5. Contact",
+        t5_p:"<b><a href=\"mailto:janstech.apps@gmail.com\">janstech.apps@gmail.com</a></b>"
+      },
+      fi: {
+        nav_privacy:"Tietosuoja", nav_support:"Tuki", nav_terms:"Käyttöehdot", nav_delete:"Poista tiedot",
+        lang_label:"Kieli", badge:"Päivitetty",
+        title:"Käyttöehdot",
+        subtitle:"Perusehdot sovelluksen käyttöön.",
+        t1_h:"1. Yleistä",
+        t1_p:"Kauppalista &amp; Muistiinpanot -sovellus tarjotaan sellaisenaan. Käyttäjä vastaa sovelluksen käytöstä ja sen tuottamien sisältöjen hyödyntämisestä.",
+        t2_h:"2. Offline-tiedot",
+        t2_p:"Kauppalistat ja muistiinpanot tallennetaan paikallisesti käyttäjän laitteelle. Käyttäjä vastaa laitteen tietoturvasta ja varmuuskopioinnista.",
+        t3_h:"3. AI-toimintojen vastuuvapaus",
+        t3_p:"Tekoälypohjaiset ehdotukset on tarkoitettu ainoastaan yleiseen tiedonhakuun ja inspiraatioksi. Tekoälyn tuottama sisältö voi olla virheellistä tai puutteellista, eikä se ole ammatillista, lääketieteellistä, ravitsemuksellista tai juridista neuvontaa.",
+        t4_h:"4. Saatavuus ja muutokset",
+        t4_p:"Sovelluksen ominaisuuksia (mukaan lukien AI-toiminnot) voidaan muuttaa, rajoittaa tai poistaa käytöstä milloin tahansa palvelun suojaamiseksi ja väärinkäytösten estämiseksi.",
+        t5_h:"5. Yhteystiedot",
+        t5_p:"<b><a href=\"mailto:janstech.apps@gmail.com\">janstech.apps@gmail.com</a></b>"
+      }
+    };
 
-      <h2>1. Yleistä</h2>
-      <p>
-        Kauppalista &amp; Muistiinpanot -sovellus tarjotaan sellaisenaan.
-        Käyttäjä vastaa sovelluksen käytöstä ja sen tuottamien sisältöjen hyödyntämisestä.
-      </p>
+    function setLang(lang){
+      localStorage.setItem("lang", lang);
+      document.documentElement.lang = (lang === "fi") ? "fi" : "en";
+      for (const el of document.querySelectorAll("[data-i18n]")){
+        const key = el.getAttribute("data-i18n");
+        if (dict[lang] && dict[lang][key] != null) el.innerHTML = dict[lang][key];
+      }
+      document.getElementById("btnFi").classList.toggle("active", lang === "fi");
+      document.getElementById("btnEn").classList.toggle("active", lang === "en");
+    }
 
-      <h2>2. Offline-tiedot</h2>
-      <p>
-        Kauppalistat ja muistiinpanot tallennetaan paikallisesti käyttäjän laitteelle.
-        Käyttäjä vastaa laitteen tietoturvasta ja varmuuskopioinnista.
-      </p>
-
-      <h2>3. AI-toimintojen vastuuvapaus</h2>
-      <p>
-        Tekoälypohjaiset ehdotukset on tarkoitettu ainoastaan yleiseen tiedonhakuun ja inspiraatioksi.
-        Tekoälyn tuottama sisältö voi olla virheellistä tai puutteellista, eikä se ole
-        ammatillista, lääketieteellistä, ravitsemuksellista tai juridista neuvontaa.
-      </p>
-
-      <h2>4. Saatavuus ja muutokset</h2>
-      <p>
-        Sovelluksen ominaisuuksia (mukaan lukien AI-toiminnot) voidaan muuttaa,
-        rajoittaa tai poistaa käytöstä milloin tahansa palvelun suojaamiseksi
-        ja väärinkäytösten estämiseksi.
-      </p>
-
-      <h2>5. Yhteystiedot</h2>
-      <p>janstech.apps@gmail.com</p>
-    </section>
-
-    <div class="footer">
-      <div>© 2026 Janstech</div>
-    </div>
-
-  </main>
+    const saved = localStorage.getItem("lang") || "en";
+    document.getElementById("btnFi").addEventListener("click", ()=>setLang("fi"));
+    document.getElementById("btnEn").addEventListener("click", ()=>setLang("en"));
+    setLang(saved);
+  </script>
 </body>
 </html>
