@@ -26,7 +26,11 @@ body{
 a{color:var(--link); text-decoration:none}
 a:hover{text-decoration:underline}
 
-.container{max-width:1100px; margin:0 auto; padding:22px 16px 56px}
+.container{
+  max-width:1100px;
+  margin:0 auto;
+  padding:22px 16px 56px;
+}
 
 .topbar{
   display:flex;
@@ -40,18 +44,35 @@ a:hover{text-decoration:underline}
   backdrop-filter: blur(10px);
 }
 
-.brand{display:flex; align-items:center; gap:12px; min-width:240px}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  min-width:240px;
+}
+
 .logo{
-  width:34px; height:34px; border-radius:12px;
+  width:34px;
+  height:34px;
+  border-radius:12px;
   background:linear-gradient(135deg, rgba(155,188,255,.9), rgba(196,120,255,.8));
   box-shadow:0 10px 30px rgba(155,188,255,.18);
+  flex:0 0 auto;
 }
+
 .brand h1{
   margin:0;
   font-size:15px;
   letter-spacing:.2px;
 }
-.brand .sub{display:inline-block; margin-left:6px; color:var(--muted); font-weight:600; font-size:12px}
+
+.brand .sub{
+  display:inline-block;
+  margin-left:6px;
+  color:var(--muted);
+  font-weight:600;
+  font-size:12px;
+}
 
 .nav{
   display:flex;
@@ -59,9 +80,11 @@ a:hover{text-decoration:underline}
   flex-wrap:wrap;
   justify-content:center;
 }
+
 .nav a{
   display:inline-flex;
   align-items:center;
+  justify-content:center;
   gap:8px;
   padding:8px 12px;
   border-radius:999px;
@@ -70,14 +93,27 @@ a:hover{text-decoration:underline}
   color:var(--text);
   font-weight:650;
   font-size:13px;
+  text-align:center;
 }
+
 .nav a.active{
   background:rgba(155,188,255,.14);
   border-color:rgba(155,188,255,.35);
 }
 
-.lang{display:flex; align-items:center; gap:10px}
-.lang .hint{color:var(--muted); font-size:12px; font-weight:650}
+.lang{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex:0 0 auto;
+}
+
+.lang .hint{
+  color:var(--muted);
+  font-size:12px;
+  font-weight:650;
+}
+
 .lang button{
   border:1px solid var(--border);
   background:rgba(255,255,255,.03);
@@ -88,6 +124,7 @@ a:hover{text-decoration:underline}
   font-size:12px;
   cursor:pointer;
 }
+
 .lang button.active{
   background:rgba(196,120,255,.16);
   border-color:rgba(196,120,255,.35);
@@ -101,6 +138,7 @@ a:hover{text-decoration:underline}
   background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
   box-shadow:var(--shadow);
 }
+
 .badge{
   display:inline-flex;
   align-items:center;
@@ -113,23 +151,32 @@ a:hover{text-decoration:underline}
   font-weight:700;
   font-size:12px;
 }
+
 .badge i{
-  width:10px; height:10px; border-radius:999px;
+  width:10px;
+  height:10px;
+  border-radius:999px;
   background:rgba(155,188,255,.9);
   box-shadow:0 0 0 6px rgba(155,188,255,.10);
 }
-.hero h2{margin:12px 0 6px; font-size:28px; letter-spacing:.2px}
-.hero p{margin:0; color:var(--muted); max-width:850px}
+
+.hero h2{
+  margin:12px 0 6px;
+  font-size:28px;
+  letter-spacing:.2px;
+}
+
+.hero p{
+  margin:0;
+  color:var(--muted);
+  max-width:850px;
+}
 
 .grid{
   display:grid;
-  grid-template-columns: 1.6fr .9fr;
+  grid-template-columns:1.6fr .9fr;
   gap:14px;
   margin-top:14px;
-}
-@media (max-width: 900px){
-  .grid{grid-template-columns:1fr}
-  .brand{min-width:auto}
 }
 
 .card{
@@ -139,11 +186,30 @@ a:hover{text-decoration:underline}
   box-shadow:var(--shadow);
   padding:18px;
 }
-.card h3{margin:0 0 10px; font-size:16px}
-.card p{margin:10px 0}
-.card ul, .card ol{margin:10px 0 12px 18px}
-.card li{margin:6px 0; color:rgba(232,238,252,.92)}
-.small{color:var(--muted); font-size:13px}
+
+.card h3{
+  margin:0 0 10px;
+  font-size:16px;
+}
+
+.card p{
+  margin:10px 0;
+}
+
+.card ul,
+.card ol{
+  margin:10px 0 12px 18px;
+}
+
+.card li{
+  margin:6px 0;
+  color:rgba(232,238,252,.92);
+}
+
+.small{
+  color:var(--muted);
+  font-size:13px;
+}
 
 .sep{
   border:0;
@@ -154,19 +220,16 @@ a:hover{text-decoration:underline}
 
 .kv{
   display:grid;
-  grid-template-columns: 140px 1fr;
+  grid-template-columns:140px 1fr;
   gap:10px 14px;
   padding:12px;
   border-radius:14px;
   border:1px solid var(--border);
   background:rgba(255,255,255,.03);
 }
-@media (max-width: 520px){
-  .kv{grid-template-columns:1fr}
-}
 
 .inline.code{
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   padding:2px 8px;
   border-radius:999px;
   border:1px solid var(--border);
@@ -178,4 +241,119 @@ a:hover{text-decoration:underline}
   margin-top:12px;
   color:var(--muted);
   font-size:12.5px;
+}
+
+@media (max-width: 900px){
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  .brand{
+    min-width:auto;
+  }
+}
+
+@media (max-width: 700px){
+  .container{
+    padding:16px 10px 44px;
+  }
+
+  .topbar{
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    gap:16px;
+    padding:18px 14px;
+  }
+
+  .brand{
+    justify-content:center;
+    text-align:center;
+    gap:12px;
+    min-width:0;
+  }
+
+  .logo{
+    width:52px;
+    height:52px;
+    border-radius:16px;
+  }
+
+  .brand h1{
+    font-size:21px;
+    line-height:1.18;
+  }
+
+  .brand .sub{
+    display:block;
+    margin:6px 0 0;
+    font-size:14px;
+    line-height:1.25;
+  }
+
+  .nav{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    width:100%;
+  }
+
+  .nav a{
+    min-height:46px;
+    padding:10px 12px;
+    white-space:normal;
+    line-height:1.2;
+    font-size:14px;
+  }
+
+  .lang{
+    justify-content:center;
+    width:100%;
+    gap:10px;
+    flex-wrap:wrap;
+  }
+
+  .lang .hint{
+    font-size:13px;
+  }
+
+  .lang button{
+    min-width:54px;
+    min-height:42px;
+    padding:9px 14px;
+    font-size:13px;
+  }
+
+  .hero{
+    padding:18px 16px;
+  }
+
+  .hero h2{
+    font-size:32px;
+    line-height:1.12;
+  }
+
+  .card{
+    padding:16px;
+  }
+}
+
+@media (max-width: 520px){
+  .kv{
+    grid-template-columns:1fr;
+  }
+}
+
+@media (max-width: 380px){
+  .nav{
+    grid-template-columns:1fr;
+  }
+
+  .brand h1{
+    font-size:19px;
+  }
+
+  .hero h2{
+    font-size:28px;
+  }
 }
